@@ -1,0 +1,154 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 HelveticaNeue;
+\f3\fmodern\fcharset0 Courier;\f4\fnil\fcharset0 SFMono-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red28\green0\blue207;
+\red196\green26\blue22;\red0\green0\blue0;\red240\green240\blue240;\red170\green13\blue145;\red92\green38\blue153;
+\red63\green110\blue116;\red46\green13\blue110;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c0;\csgray\c100000;\csgenericrgb\c11000\c0\c81000;
+\csgenericrgb\c77000\c10200\c8600;\cssrgb\c0\c0\c0;\cssrgb\c95294\c95294\c95294;\csgenericrgb\c66500\c5200\c56900;\csgenericrgb\c35900\c14900\c60100;
+\csgenericrgb\c24700\c43100\c45600;\csgenericrgb\c18100\c5200\c43100;}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 POPOVER VIEW FOR IPHONE\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf2 \cb3 Drag a new view controller onto your storyboard and tweak these settings:
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2     
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2  \cf4 1\cf2 ) In \cf5 "Simulated Metrics"\cf2  change \cf5 "Size"\cf2  to \cf5 "Freeform"\cf2  and \cf5 "Status Bar"\cf2  to \cf5 "None."
+\f2\fs48 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {{\NeXTGraphic simulated_metrics.png \width5260 \height3480 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf4 \cb3 2\cf2 ) \cf5 "Simulated Size"\cf2  change your view\cf5 's height and width to the actual size you want your popover'\cf2 s content to be.
+\f2\fs48 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {{\NeXTGraphic simulated_size.png \width5220 \height2620 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf4 \cb3 3\cf2 ) Back on the attributes inspector check the box next to \cf5 "Use Preferred Explicit Size"\cf2  and make sure the height and width match the sizes you set \cf8 in\cf2  the previous step.\
+
+\f0\fs24 \cf0 \cb1 {{\NeXTGraphic content_size.png \width5220 \height2840 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 4) Add viewcontroller identifier \
+\
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf4 \cb3 \ulth \ulc4 5\cf2 \ulnone ) Open your view controller\ulth  \cf8 \ulnone class\cf2  file \ulth a\ulnone nd \ulth a\ulnone dd the\ulth \'a0\ulnone UIPopoverPresentationControllerDelegate\'a0\cf8 protocol\cf2 \ulth \ulc2 :
+\f0\fs24 \cf0 \ulnone \
+
+\f1\fs22 \cf2     eg:\ulth  \cf8 \ulnone class\cf2  ViewController: \cf9 UIViewController\cf2 , \cf9 UIPopoverPresentationControllerDelegate\cf2  \{
+\f3\fs48 \cf6 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf6 \
+\pard\tx543\pardeftab543\pardirnatural\partightenfactor0
+
+\f1\fs22 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 6\cf2 ) Put the popover code \cf8 in\cf2  viewcontroller \cf8 class
+\f3\fs48 \cf6 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+
+\f1\fs22 \cf2 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 		 \cf8 var\cf2  popoverContent:\cf10 popOver\cf2 !
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popoverContent = \cf9 storyboard\cf2 ?.\cf11 instantiateViewController\cf2 (withIdentifier: \cf5 "popOverIphone"\cf2 ) \cf8 as\cf2 ! \cf10 popOver
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popoverContent.\cf9 modalPresentationStyle\cf2  = .\cf11 popover
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         \cf8 if\cf2  \cf8 let\cf2  popover = popoverContent.\cf9 popoverPresentationController\cf2  \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         \cf8 let\cf2  viewForSource = sender
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popover.\cf9 sourceView\cf2  = viewForSource
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popover.\cf9 sourceRect\cf2  = viewForSource.\cf9 bounds
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popover.\cf9 permittedArrowDirections\cf2  = .\cf9 up
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popoverContent.\cf9 preferredContentSize\cf2  = \cf9 CGSize\cf2 (width: \cf4 150\cf2 , height: \cf4 50\cf2 )
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         \}
+\f0\fs24 \cf0 \
+\
+
+\f1\fs22 \cf2         popoverContent.\cf9 view\cf2 .\cf9 backgroundColor\cf2  = \cf9 UIColor\cf2 (red: \cf4 247\cf2 /\cf4 255.0\cf2 , green: \cf4 245\cf2 /\cf4 255.0\cf2 , blue: \cf4 246\cf2 /\cf4 255.0\cf2 , alpha: \cf4 1.0\cf2 );
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popoverContent.\cf9 popoverPresentationController\cf2 ?.\cf9 delegate\cf2  = \cf8 self\cf2 ;
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         \cf8 self\cf2 .\cf11 present\cf2 (popoverContent, animated: \cf8 true\cf2 ) \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         popoverContent.\cf9 view\cf2 .\cf9 tintColor\cf2  = \cf9 UIColor\cf2 .\cf9 black
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         \}\
+
+\f4\fs48 \cf6 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+
+\f1\fs22 \cf4 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 7\cf2 ) Add popover delegate \cf8 in\cf2  view controller \cf8 class
+\f2\fs48 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+
+\f1\fs22 \cf8 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 	func\cf2  adaptivePresentationStyleForPresentationController(controller: \cf9 UIPresentationController\cf2 ) -> \cf9 UIModalPresentationStyle\cf2  \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         \cf8 return\cf2  \cf9 UIModalPresentationStyle\cf2 .\cf11 none
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2     \}
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2     
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2     \cf8 func\cf2  adaptivePresentationStyle(for controller: \cf9 UIPresentationController\cf2 , traitCollection: \cf9 UITraitCollection\cf2 ) -> \cf9 UIModalPresentationStyle\cf2  \{
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2         \cf8 return\cf2  \cf9 UIModalPresentationStyle\cf2 .\cf11 none
+\f0\fs24 \cf0 \
+
+\f1\fs22 \cf2     \}\
+\
+8) Look Like popup
+\f4\fs48 \cf6 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {{\NeXTGraphic Screen Shot 2017-10-16 at 5.55.18 PM.png \width6360 \height2100 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}
+\f2\fs48 \cf6 \cb7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec6 \
+}
